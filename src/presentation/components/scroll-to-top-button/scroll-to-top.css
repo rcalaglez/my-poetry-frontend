@@ -1,0 +1,24 @@
+.scroll-to-top-button {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  background-color: transparent;
+  border: 1px solid #333; /* Bordes oscuros */
+  border-radius: 16px; /* Leve radio */
+  padding: 10px;
+  color: #333; /* Icono de color oscuro */
+  transition: background-color 0.5s ease, color 0.5s ease,
+    transform 2s ease-in-out;
+  z-index: 9999;
+}
+
+.scroll-to-top-button:hover,
+.scroll-to-top-button:active {
+  background-color: #333; /* Fondo oscuro en hover y pulsado */
+  color: #fff; /* Icono blanco en hover y pulsado */
+}
+
+.scroll-to-top-button svg {
+  width: 20px;
+  height: 20px;
+}

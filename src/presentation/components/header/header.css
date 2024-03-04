@@ -1,0 +1,54 @@
+.app-header {
+  /* Motted glassed effect */
+  background: rgba(245, 245, 245, 0.5);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: black;
+}
+
+.app-header::before,
+.app-header::after {
+  content: "";
+  left: 0px;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+}
+.app-header::before {
+  backdrop-filter: url(#noiseFilter);
+  z-index: 2;
+}
+.app-header::after {
+  backdrop-filter: blur(5px);
+  z-index: 1;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.typing {
+  width: 20ch;
+  animation: typing 0.7s steps(22), step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: monospace;
+  font-weight: 700;
+  font-size: 1.25em;
+  z-index: 2;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}

@@ -1,0 +1,32 @@
+footer {
+  position: fixed;
+  line-height: 16px;
+  margin-bottom: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  text-align: center;
+  justify-content: center;
+  align-content: center;
+}
+
+.not-scrolled {
+  background-color: #f0e27b; /* Retro yellow */
+  transition: background-color 1s ease;
+}
+
+.scrolled {
+  transition: background-color 1s ease;
+  background-color: whitesmoke;
+}
+
+.profile {
+  text-decoration: none;
+  font-weight: 700;
+  color: #2c4e72; /* Retro blue */
+}
+
+.profile:hover {
+  text-decoration: underline;
+}
