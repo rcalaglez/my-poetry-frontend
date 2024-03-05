@@ -1,8 +1,9 @@
 import type { Poetry } from "../../interfaces/poetry.response";
+import { envs } from "../config/envs";
 
 export const getAllUseCase = async () => {
   try {
-    const response = await fetch("http://localhost:3100/api/poetry", {
+    const response = await fetch(envs.BASE_URL, {
       method: "GET",
     });
 
