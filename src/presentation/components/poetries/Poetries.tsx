@@ -16,9 +16,7 @@ const PoetryList = () => {
     } catch (error) {
       return [];
     } finally {
-      setTimeout(() => {
-        setLoading(false);
-      }, 1500);
+      setLoading(false);
     }
   };
 
