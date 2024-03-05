@@ -1,5 +1,5 @@
 import type { Poetry } from "../../interfaces/poetry.response";
-import { envs } from "../config/envs";
+import { BASE_URL } from "../config/constants";
 
 interface Body {
   title: string;
@@ -13,7 +13,7 @@ export const likeUseCase = async (poetry: Body) => {
     const { isLiked, category, ...body } = poetry;
     const endpoint = isLiked ? "/like" : "/unlike";
 
-    const response = await fetch(`${envs.BASE_URL}${endpoint}`, {
+    const response = await fetch(`${BASE_URL}${endpoint}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
